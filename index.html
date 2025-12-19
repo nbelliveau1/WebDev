@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Academic Portfolio</title>
+    
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #A51C30; /* Harvard Crimson, naturally */
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #292929;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Nicholas Belliveau</h1>
+    <p>Welcome to my digital office.</p>
+    
+    <button id="contactBtn">Upload Document Here</button>
+
+
+    <script>
+        //Select the element we want to control
+        //Retrieves the name of the ID button we have created above
+        //The ID buttons name is called contactBTN
+        const button  = document.getElementById("contactBtn");
+
+        //Define a function
+        //Function name: sayHello()
+        //Function execution Sends a message to the user saying thank you for visiting my office hours
+        function sayHello(){
+            alert("Thank you for uploading your document");
+            button.innerText = "Document Successfully Uploaded";
+            button.style.backgroundColor = "blue";
+        }
+
+        //Add an event listener (Connecting the wire)
+        button.addEventListener("click", sayHello);
+    </script>
+</body>
+</html>
